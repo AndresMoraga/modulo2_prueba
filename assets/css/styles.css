@@ -14,9 +14,31 @@ div {
 
 .titulo {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+}
+
+.titulo img {
+    width: 20%;
+    padding: 1%;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+button {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .menumobile {
@@ -30,20 +52,21 @@ div {
 }
 
 .sidebar {
-    background-color: rgb(22, 22, 152);
-    color: rgb(207, 209, 243);
+    background-color: rgb(121, 24, 24);
+    color: rgb(255, 255, 255);
 }
 
 .filter {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(191, 189, 189);
+    background-color: rgb(0, 0, 0);
     padding: 1%;
+    color: white;
 }
 
 .filtros {
-    width: 80%;
+    width: 20%;
 }
 
 .main {
@@ -54,7 +77,7 @@ div {
     justify-items: center;
 }
 
-.auto {
+.carta {
     grid-area: auto;
     display: flex;
     flex-direction: column;
@@ -66,8 +89,39 @@ div {
     margin: 10px;
 }
 
-.auto img {
+.carta img {
     width: 90%;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.carta img:hover {
+    filter: grayscale(0%);
+}
+
+.carta button {
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.carta button:hover {
+    width: 50%;
+    background-color: rgb(121, 24, 24);
+    color: white;
+    font-size: 20px;
+}
+
+.carta p {
+    color: rgb(61, 13, 13);
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .paginas {
@@ -84,6 +138,8 @@ div {
 
 .paginas button {
     width: 5%;
+    background-color: rgb(61, 13, 13);
+    color: white;
 }
 
 .footer {
@@ -92,7 +148,7 @@ div {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: rgb(15, 15, 78);
+    background-color: rgb(61, 13, 13);
     color: rgb(207, 209, 243);
 }
 
@@ -110,12 +166,13 @@ div {
 @media (min-width: 576px) {
     .container {
         display: grid;
-        grid-template-columns: 15% 1fr;
+        grid-template-columns: 10% 1fr;
         grid-template-rows: 10% 1fr;
         grid-template-areas:
             "sidebar filter"
             "sidebar main"
-            "footer main";
+            "sidebar main"
+            "footer footer";
     }
 
     .sidebar {
@@ -153,20 +210,20 @@ div {
         justify-content: center;
         padding: 10px;
         position: fixed;
-        bottom: 0px;
+        bottom: 50px;
         left: 0;
         width: 100%;
         z-index: 1000;
     }
 
     .footer {
-        display: flex; 
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .footer p{
+    .footer p {
         text-align: center;
     }
 
